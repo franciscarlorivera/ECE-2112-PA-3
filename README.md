@@ -44,11 +44,10 @@ cars_6_to_10.loc[:,['Model', 'mpg', 'cyl', 'hp', 'gear']]
 > - For Pontiac Firebird, display only Model, mpg, hp, and wt.
 > - Store the two results in toyota and pontiac, respectively. Do not use a hard-coded row number to locate either model.
 
-
 The following commands and operations were used in obtaining the required data selections from the data frame:
-- `toyota = cars.loc[cars['Model']== 'Toyota Corolla']` ---> Filters the cars data frame using a Boolean condition that works through the data listed under the Model column until the desired data, Toyota Corolla, is located. The row that matches the required criteria is then stored in the named convention 'toyota'
+- `toyota = cars.loc[cars['Model']== 'Toyota Corolla']` ---> Filters the cars data frame using a Boolean condition that works through the data listed under the Model data column until the desired data, Toyota Corolla, is located. The row that matches the required criteria is then stored in the named convention 'toyota'
 - `toyota` ---> Calls out the filtered data frame stored in toyota.
-- `pontiac = cars.loc[cars['Model']== 'Pontiac Firebird', ['Model', 'mpg', 'hp', 'wt']]` ---> Filters the cars data frame using a Boolean condition that locates the data, Pontiac Firebird, under the Model column. The command then filters the data columns and only retains the data under the selected columns: 'Model', 'mpg', 'hp' and 'wt'. The filtered data frame is stored under the named convention 'pontiac'.
+- `pontiac = cars.loc[cars['Model']== 'Pontiac Firebird', ['Model', 'mpg', 'hp', 'wt']]` ---> Filters the cars data frame using a Boolean condition that locates the data, Pontiac Firebird, under the Model data column. The command then filters the data columns and only retains the data under the selected columns: 'Model', 'mpg', 'hp' and 'wt'. The filtered data frame is stored under the named convention 'pontiac'.
 - `pontiac` ---> Calls out the filtered data frame stored in pontiac.
 
 ```
@@ -67,8 +66,22 @@ pontiac
 > - Display selected cars and its shape.
 > - The final DataFrame must contain exactly three rows and five columns.
 
+The following commands and operations were used in obtaining the required data selections from the data frame:
+- `target = ['Datsun 710', 'Lotus Europa', 'Ferrari Dino']` ---> Creates a list assigned to the variable named 'target' that contains three specified strings: 'Datsun 710', 'Lotus Europa', and 'Ferrari Dino'.
+- `selected_cars = cars.loc[cars['Model'].isin(target), ['Model', 'mpg', 'cyl', 'hp', 'gear']]` ---> Filters the cars data frame using a Boolean condition that locates the three specified data located in the variable named target under the Model data column. The command filters the data frame further by retaining the data under the specified data columns: 'Model', 'mpg', 'cyl', 'hp', and 'gear'. The modified data frame is stored in the named convention selected_cars.
+- `selected_cars` ---> Calls out the modified data frame stored in selected_cars.
+- `print ('Shape of Data Frame:', selected_cars.shape)` ---> Displays the shape of the selected_cars data frame next to the text "Shape of Data Frame:".
+
+```
+target = ['Datsun 710', 'Lotus Europa', 'Ferrari Dino']
+selected_cars = cars.loc[cars['Model'].isin(target), ['Model', 'mpg', 'cyl', 'hp', 'gear']]
+selected_cars
+
+print ('Shape of Data Frame:', selected_cars.shape)
+``` 
+
 ### VERSION HISTORY
-- September 5, 2026: README File created
+- September 5, 2026: README File created.
 - September 5, 2026: Added content for introductory section.
-- September 5, 2026: Completed content for Part A and Part B
-- September 5, 2026: 
+- September 5, 2026: Completed content for Part A and Part B.
+- September 5, 2026: Completed contet for Part C.
