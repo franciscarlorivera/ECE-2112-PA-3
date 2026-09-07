@@ -85,3 +85,4 @@ print ('Shape of Data Frame:', selected_cars.shape)
 - September 5, 2026: Added content for introductory section.
 - September 5, 2026: Completed content for Part A and Part B.
 - September 5, 2026: Completed contet for Part C.
+- September 7, 2026: Uploaded Jupyter Notebook File.
