@@ -20,6 +20,7 @@ The repository covers Programming Assignment 3 for our ECE2112: Advanced Compute
 The following commands and operations were used in obtaining the required data selections from the data frame:
 - `import pandas as pd` ---> Imports the Pandas library that gives access to positional indexing and slicing tools for manipulation of given data frames. The code also converts the library name to the convention pd.
 - `cars = pd.read_csv('cars.csv')` ---> Reads the csv dataset and converts it into a structured Pandas data frame assigned to the named convention cars.
+- `cars` ---> Calls out the data frame stored in cars derived from the cars.csv dataset.
 - `print ('Shape of Data Frame:', cars.shape, '\n')` ---> Displays the shape of the cars data frame next to the text "Shape of Data Frame:" and creates a line break below to separate the output from subsequent outputs.
 - `cars.columns` ---> Displays the names of column headers within the cars data frame.
 - `cars_6_to_10 = cars.iloc[5:10]` ---> Positional slicing command that obtains the 6th to 10th row of the cars data frame with respect to their row indices. The selected rows are stored in cars_6_to_10.
@@ -29,6 +30,7 @@ The following commands and operations were used in obtaining the required data s
 import pandas as pd
 
 cars = pd.read_csv('cars.csv')
+cars
 
 print ('Shape of Data Frame:', cars.shape, '\n')
 cars.columns
@@ -86,3 +88,6 @@ print ('Shape of Data Frame:', selected_cars.shape)
 - September 5, 2026: Completed content for Part A and Part B.
 - September 5, 2026: Completed contet for Part C.
 - September 7, 2026: Uploaded Jupyter Notebook File.
+- September 10, 2026: Uploaded revised Jupyter Notebook File
+- September 10, 2026: Updated content for Part A.
+- September 10, 2026: Uploaded cars.csv file.
